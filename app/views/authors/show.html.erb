@@ -1,0 +1,20 @@
+<h1><%= @author.name %></h1>
+
+<%= image_tag @author.image, :class => 'feature' if @author.image.present? %>
+<ul class="blurb">
+  <li>Date of birth: <%= @author.dob if @author.dob.present? %></li>
+  <li>Nationality: <%= @author.nationality %></li>
+  <li></li>
+</ul>
+
+<div class="box" id="catalogue">
+  <% @author.books.each do |book| %>
+    <%= link_to image_tag(book.image, :class => 'thumb'), book %>
+  <% end %>
+</div>
+
+<div class="controls">
+  <%= link_to 'Edit', edit_author_path(@author.id) %>
+  |
+  <%= link_to 'Delete', @author, :method => 'delete'%>
+</div>

@@ -1,0 +1,103 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+input[type=submit] {
+  margin-top: 16px;
+}
+
+.thumb {
+  max-height: 250px;
+  display: inline-block;
+  margin: 1em;
+}
+.box h5 {
+  text-align: right;
+  padding: 20px;
+  margin-top: 0px;
+}
+
+.field_with_errors {
+  border: 1px solid red;
+}
+
+h1, h2, p {
+  color: #fdf5cb;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+.box h1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 350px;
+  margin-top: 120px;
+  margin-left: 50px;
+}
+
+.container {
+  background-color: #202b38;
+  padding: 5em;
+  min-height: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background-color: #fdf5cb;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.box {
+  background-color: #fdf5cb;
+  margin-top: 3em;
+  border-radius: 10px;
+}
+
+.box * {
+  color: #202b38;
+}
+
+.box a {
+  color: #309dcc;
+}
+
+.controls {
+  background-color: #fdf5cb;
+  margin-top: 3em;
+  border-radius: 10px;
+  width: 250px;
+  padding: 1em;
+  text-align: center;
+  font-size: 20px;
+  color: #309dcc;
+}
+
+.links {
+  margin-left: 0%;
+  margin-bottom: 16px;
+}
+.blurb {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 20px;
+  list-style: none;
+  line-height: 40px;
+}
+
+.feature {
+  max-width: 280px;
+  margin-right: 20px;
+}
+
+#catalogue img{
+  max-width: 25%;
+}
+
+#read_list {
+  list-style: none;
+  padding: 1em;
+  font-size: 25px;
+  line-height: 40px;
+}
