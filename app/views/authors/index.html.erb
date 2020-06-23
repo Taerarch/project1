@@ -1,13 +1,13 @@
 <h1>Authors</h1>
 
-<% @authors.each do |author| %>
-  <div class="box">
-  <h1><%= link_to author.name, author %></h1>
-  <%= image_tag author.image, :class => 'thumb' if author.image.present? %>
-  </div>
-<% end %>
-
-
 <div class="controls">
   <%= link_to 'Add Author', new_author_path %>
 </div>
+
+
+<% @authors.each do |author| %>
+  <div class="box">
+  <h2><%= link_to author.name, author %></h2>
+  <%= image_tag author.image, :class => 'thumb' if author.image.present? %>
+  </div>
+<% end %>

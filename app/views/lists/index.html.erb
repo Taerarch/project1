@@ -1,11 +1,12 @@
 <h1>All Reading Lists</h1>
 
+
+<div class="controls">
+  <%= link_to 'Create Reading List', new_list_path %>
+</div>
+
 <div class="box" id="read_list">
 <% @lists.each do |list| %>
   <h3><%= link_to  list.title, list %> by <%= list.user.name%></h1>
 <% end %>
-</div>
-
-<div class="controls">
-  <%= link_to 'Create Reading List', new_list_path %>
 </div>

@@ -3,14 +3,21 @@
 
 <% @list.books.each do |book| %>
   <div class="box">
-    <h1><%= link_to book.title, book %></h1>
+    <h2><%= link_to book.title, book %></h2>
     <%= image_tag book.image, :class => 'thumb' if book.image.present? %>
-    <h5><%= link_to 'Delete', book, :method => 'delete'  %></h5>
+    <% if @current_user.present? %>
+      <% if @current_user.admin == true || @current_user.id == @list.user_id %>
+        <h5><%= link_to 'Remove', remove_book_path(@list.id, book.id), :method => 'delete'  %></h5>
+      <% end %>
+    <% end %>
   </div>
 <% end %>
-
-<div class="controls">
-  <%= link_to 'Edit', edit_list_path(@list.id) %>
-  |
-  <%= link_to 'Delete', @list, :method => 'delete'  %>
-</div>
+<% if @current_user.present? %>
+  <% if @current_user.admin? || @current_user.id == @list.user_id %>
+    <div class="controls">
+      <%= link_to 'Edit Name', edit_list_path(@list.id) %>
+      |
+      <%= link_to 'Delete List', @list, :method => 'delete'  %>
+    </div>
+  <% end %>
+<% end %>

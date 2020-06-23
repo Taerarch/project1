@@ -1,17 +1,21 @@
+<h1>Add Book</h1>
+
+
+
 <div class="form">
   <%= form_for @book do |f| %>
 
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, value: @title%>
 
     <%= f.label :year %>
-    <%= f.text_field :year %>
+    <%= f.text_field :year, value: @date %>
 
     <%= f.label :genre %>
-    <%= f.text_field :genre %>
+    <%= f.text_field :genre, value: @genre %>
 
     <%= f.label :image %>
-    <%= f.url_field :image%>
+    <%= f.url_field :image, value: @cover%>
 
     <%= f.label :author_id %>
     <%= f.select :author_id, Author.pluck(:name, :id), :include_blank => true %>

@@ -1,5 +1,4 @@
 class BooksController < ApplicationController
-
   def index
     @books = Book.all
   end
@@ -36,6 +35,25 @@ class BooksController < ApplicationController
       redirect_to book
     end
   end
+
+  def search
+    render :search
+  end
+
+  def result
+    @book = Book.new
+    @title = params[:book_title]
+    book_url = "https://www.googleapis.com/books/v1/volumes?q=title:#{@title}"
+    info = HTTParty.get book_url
+    # raise "Hell"
+    @cover = info["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
+    @genre = info["items"][0]["volumeInfo"]["categories"]
+    @date = info["items"][0]["volumeInfo"]["publishedDate"]
+    render :result
+  end
+
+
+
 
   private
   def book_params

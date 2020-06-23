@@ -1,8 +1,13 @@
 <h1>Books</h1>
 
+<div class="controls">
+  <%= link_to 'Manually Add Novel', new_book_path %>
+  <%= link_to 'Search for Novel', search_book_path %>
+</div>
+
 <% @books.each do |book| %>
   <div class = "box">
-  <h1><%= link_to book.title, book %></h1>
+  <h2><%= link_to book.title, book %></h2>
   <%= image_tag book.image, :class => 'thumb' if book.image.present? %>
   </div>
 <% end %>

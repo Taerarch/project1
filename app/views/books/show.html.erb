@@ -3,9 +3,11 @@
 <%= image_tag @book.image, :class => 'feature', :alt => @book.title %>
 
 <ul class="blurb">
-  <li>First published: <%= @book.year %></li>
+  <li>Published: <%= @book.year %></li>
   <li>Genre: <%= @book.genre %></li>
-  <li>Author: <%= link_to @book.author.name, @book.author %></li>
+  <% if @book.author.present? %>
+    <li>Author: <%= link_to @book.author.name, @book.author %></li>
+  <% end %>
 </ul>
 
 
