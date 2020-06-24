@@ -5,22 +5,23 @@
 
 body {
   background-image: url("https://i.pinimg.com/originals/54/20/1d/54201da4cd81a892f5738e79977c285d.jpg");
-  background-color: #202b38;
+  background-color: black;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 .container {
-  background-color: white;
-  padding: 5em;
+  background-color: #e5e1c1;
   min-height: 900px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+  padding-bottom: 2em;
 }
 
 nav {
-  background-color: #202b38;
+  background-color: #204433;
   padding: 25px;
-  border-radius: 15px;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 * {
@@ -28,13 +29,16 @@ nav {
 }
 
 h1, h2, p {
-  color: #202b38;
+  color: black;
 }
 
 h1 {
-  padding: 10px;
   font-size: 50px;
-  text-align: center;
+  display: inline-block;
+  width: 45%;
+  padding-left: 2em;
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
 
 a {
@@ -42,10 +46,14 @@ a {
 }
 
 .box {
-  background-color: #205555;
-  margin-top: 1em;
-  border-radius: 15px;
+  background-color: #d5d1b1;
+  margin-top: 3em;
   padding: 10px;
+  padding: 2em;
+  padding-left: 5em;
+  padding-right: 3em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .box h2 {
@@ -53,7 +61,7 @@ a {
   vertical-align: top;
   width: 360px;
   margin-top: 90px;
-  margin-left: 50px;
+  margin-left: 10px;
   font-size: 35px;
   margin-right: 0px;
 }
@@ -65,27 +73,33 @@ a {
   margin-top: 0px;
 }
 
-.box h3, p {
-  color: white;
+.box h3, p, li {
+  color: black;
+}
+
+.box a {
+  color: #0076d1;
 }
 
 .controls {
-  background-color: #202b38;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  border-radius: 15px;
+  background-color: #204433;
+  border-radius: 5px;
   width: 200px;
   padding: 1em;
   text-align: center;
   font-size: 20px;
   color: #70bbff;
-  margin-left: 31.5%;
+  display: inline-block;
+  margin: 2em;
+  margin-left: 1em;
+  line-height: 30px;
 }
 
 .links {
   margin-left: 0%;
-  margin-bottom: 16px;
+  margin-bottom: 50px;
 }
+
 .blurb {
   display: inline-block;
   vertical-align: top;
@@ -111,9 +125,10 @@ a {
 }
 
 .form {
-  background-color: #205555;
+  background-color: #204433;
   padding: 3em;
-  border-radius: 15px;
+  margin: 4em;
+  border-radius: 5px;
 }
 
 .form label {
@@ -125,27 +140,38 @@ a {
   margin-top: 10px;
 }
 
+.bottom {
+  margin-left: 60%;
+}
+
 input[type=submit] {
   margin-top: 16px;
 }
 
 #front_page {
-  padding: 2em;
   min-height: 400px;
-  margin-top: 1em;
+  margin-top: 48px;
 }
 
-#catalogue img{
-  max-width: 25%;
+#catalogue {
+  margin-top: 0px;
+  background-color: #204433;
+}
+
+#catalogue img {
+  max-width: 20%;
 }
 
 #read_list {
   list-style: none;
   padding: 1em;
-  padding-left: 2em;
+  padding-left: 2.6em;
   font-size: 25px;
   line-height: 40px;
   min-height: 300px;
+  margin-top: 48px;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 #sign {
   margin-left: 35%;

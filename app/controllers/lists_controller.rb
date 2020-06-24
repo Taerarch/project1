@@ -2,7 +2,7 @@ class ListsController < ApplicationController
 before_action :check_for_login, :only => [:new, :create, :edit]
 
   def index
-    @lists = List.all
+    @lists = List.all.order(:user_id)
   end
 
   def show

@@ -1,7 +1,6 @@
-<h1>Books</h1>
+<h1>Novels</h1>
 
 <div class="controls">
-  <%= link_to 'Manually Add Novel', new_book_path %>
   <%= link_to 'Search for Novel', search_book_path %>
 </div>
 
@@ -11,3 +10,7 @@
   <%= image_tag book.image, :class => 'thumb' if book.image.present? %>
   </div>
 <% end %>
+
+<div class="controls bottom">
+  <%= link_to 'Manually Add Novel', new_book_path %>
+</div>

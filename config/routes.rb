@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :authors
   resources :lists
   resources :books
+  resources :users
 
 
 
@@ -22,7 +23,6 @@ Rails.application.routes.draw do
   delete '/lists/:list_id/remove/:book_id' => 'lists#remove', :as => 'remove_book'
 
 
-  resources :users, :only => [:index, :new, :create]
 
 
 
