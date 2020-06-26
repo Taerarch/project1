@@ -4,9 +4,10 @@
   <%= form_for @list do |f| %>
 
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :required => true %>
 
     <%= f.submit %>
 
   <% end %>
+
 </div>

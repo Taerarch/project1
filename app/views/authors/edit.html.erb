@@ -1,3 +1,20 @@
 <h1>Edit Author</h1>
+<div class="form">
+  <%= form_for @author do |f| %>
 
-<%= render :partial => 'form' %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+
+    <%= f.label :dob %>
+    <%= f.text_field :dob %>
+
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.submit %>
+
+  <% end %>
+</div>

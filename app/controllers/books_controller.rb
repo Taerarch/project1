@@ -24,6 +24,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find params[:id]
+    @lists = List.all
   end
 
   def destroy
@@ -49,6 +50,7 @@ class BooksController < ApplicationController
     @cover = info["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
     @genre = info["items"][0]["volumeInfo"]["categories"]
     @date = info["items"][0]["volumeInfo"]["publishedDate"]
+    @synopsis = info["items"][0]["volumeInfo"]["description"]
     render :result
   end
 
@@ -57,6 +59,6 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :year, :genre, :image, :author_id)
+    params.require(:book).permit(:title, :year, :genre, :synopsis, :image, :author_id)
   end
 end

@@ -1,4 +1,4 @@
-<h1><%= @book.title %></h1>
+<h1 class="list_title"><%= @book.title %></h1>
 
 <div class="box">
   <%= image_tag @book.image, :class => 'feature', :alt => @book.title %>
@@ -9,21 +9,27 @@
     <% if @book.author.present? %>
       <li>Author: <%= link_to @book.author.name, @book.author %></li>
     <% end %>
+
   </ul>
+  <p id="desc"><%= @book.synopsis %></p>
 </div>
 
 
 <div class="controls bottom">
   <%= link_to 'Edit Book', edit_book_path(@book.id) %>
-  |
-  <%= link_to 'Delete Book', @book, :method => 'delete' %>
+  <% if @current_user.present? %>
+    <% if @current_user.admin?%>
+      |
+      <%= link_to 'Delete Book', @book, :method => 'delete' %>
+    <% end %>
+  <% end %>
 </div>
 
   <!-- add this book to a list -->
   <% if @current_user.present? && @current_user.lists.present?%>
     <div id="listitem" class="box">
-    <% @current_user.lists.each do |list| %>
-      <p><%= link_to "Add to #{list.title}", add_book_path(list.id, @book.id), :method => 'post' %></p>
-    <% end %>
+      <% output = @current_user.lists.each do |list| %>
+        <p><%= link_to "Add to #{list.title}", add_book_path(list.id, @book.id), :method => 'post' %></p>
+      <% end %>
     </div>
   <% end %>

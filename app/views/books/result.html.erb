@@ -1,3 +1,35 @@
 <h1>Add Book</h1>
 
-<%= render :partial => 'form' %>
+<div class="form">
+  <% if @book.errors.any? %>
+    <ol>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ol>
+  <% end %>
+
+  <%= form_for @book do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title, value: @title%>
+
+    <%= f.label :year %>
+    <%= f.text_field :year, value: @date %>
+
+    <%= f.label :genre %>
+    <%= f.text_field :genre, value: @genre %>
+
+    <%= f.label :synopsis %>
+    <%= f.text_field :synopsis, value: @synopsis %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image, value: @cover%>
+
+    <%= f.label :author_id %>
+    <%= f.select :author_id, Author.pluck(:name, :id), :include_blank => true %>
+
+    <%= f.submit %>
+
+  <% end %>
+</div>

@@ -1,4 +1,4 @@
-<h1><%= @list.title %></h1>
+<h1 class="list_title"><%= @list.title %></h1>
 
 
 <% @list.books.each do |book| %>
@@ -7,16 +7,17 @@
     <%= image_tag book.image, :class => 'thumb' if book.image.present? %>
     <% if @current_user.present? %>
       <% if @current_user.admin == true || @current_user.id == @list.user_id %>
-        <h5><%= link_to 'Remove', remove_book_path(@list.id, book.id), :method => 'delete'  %></h5>
+        <h5 class="remove_link"><%= link_to 'Remove', remove_book_path(@list.id, book.id), :method => 'delete'  %></h5>
       <% end %>
     <% end %>
   </div>
 <% end %>
+
 <% if @current_user.present? %>
   <% if @current_user.admin? || @current_user.id == @list.user_id %>
-    <div class="controls">
+    <div class="controls bottom">
       <%= link_to 'Edit Name', edit_list_path(@list.id) %>
-      |
+      </br>
       <%= link_to 'Delete List', @list, :method => 'delete'  %>
     </div>
   <% end %>

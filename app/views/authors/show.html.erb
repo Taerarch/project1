@@ -9,11 +9,17 @@
   </ul>
 </div>
 
+
 <div class="controls bottom">
   <%= link_to 'Edit', edit_author_path(@author.id) %>
-  |
-  <%= link_to 'Delete', @author, :method => 'delete'%>
+  <% if @current_user.present? %>
+    <% if @current_user.admin?%>
+      |
+      <%= link_to 'Delete', @author, :method => 'delete'%>
+    <% end %>
+  <% end %>
 </div>
+
 
 <div class="box" id="catalogue">
   <% @author.books.each do |book| %>

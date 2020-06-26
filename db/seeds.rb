@@ -17,11 +17,11 @@ puts "#{Author.count}"
 
 Book.destroy_all
 
-b1 = Book.create(:title => 'The Lord of the Rings', :year => '1954-1955', :genre => 'Fantasy', :image => 'https://upload.wikimedia.org/wikipedia/en/e/e9/First_Single_Volume_Edition_of_The_Lord_of_the_Rings.gif')
+b1 = Book.create(:title => 'The Lord of the Rings', :year => '1954-1955', :genre => 'Fantasy', :synopsis => 'The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins, who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.', :image => 'https://upload.wikimedia.org/wikipedia/en/e/e9/First_Single_Volume_Edition_of_The_Lord_of_the_Rings.gif')
 
-b2 = Book.create(:title => 'The Way of Kings', :year => '2010', :genre => 'Fantasy', :image => 'https://hungryandfit.com/wp-content/uploads/2014/04/The-Way-of-Kings-by-Brandon-Sanderson.jpg')
+b2 = Book.create(:title => 'The Way of Kings', :year => '2010', :genre => 'Fantasy', :synopsis => 'Shallan, a minor lighteyed woman whose family and lands are in danger, hatches a daring plot to switch a broken Soulcaster (a device that allows people to change objects to other things) with a working one belonging to Jasnah Kholin, sister of the Alethi king.', :image => 'https://hungryandfit.com/wp-content/uploads/2014/04/The-Way-of-Kings-by-Brandon-Sanderson.jpg')
 
-b3 = Book.create(:title => 'Frankenstein', :year => '1818', :genre => 'Gothic/Science Fiction', :image => 'https://m.media-amazon.com/images/I/41dj+xC+zWL.jpg')
+b3 = Book.create(:title => 'Frankenstein', :year => '1818', :genre => 'Gothic/Science Fiction', :synopsis => 'As Viktor Frankenstein (Kenneth Branagh) is dying he shares a tale of gruesome terror with a sea captain. Viktor, using previous experiments by a brilliant scientist, was able to bring a creature (Robert De Niro) assembled from body parts back to life. Once he realized how destructive his experiments had become, he abandoned the creature and tried to live a normal life with his fiance (Helena Bonham Carter). The lonely creature seeks out Viktor and demands one of two things: a bride or revenge.', :image => 'https://m.media-amazon.com/images/I/41dj+xC+zWL.jpg')
 
 puts "#{Book.count}"
 
