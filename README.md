@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The product being developed is a list of books in a playlist format attached to individual users.
 
-Things you may want to cover:
+This project uses rails for its CRUD system and takes information from google books using the gem HTTParty. 
 
-* Ruby version
 
-* System dependencies
+### Interesting Features
 
-* Configuration
+- Assignment of the current user's id to any list that they create, allowing them to modify it.
+- Using the google book database search to input data for a new book.
+- A lot of links throughout connecting for example from a list to a book inside to it's author to another book by the same author.
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### To Do List
 
-* Deployment instructions
-
-* ...
+- Update the add to list feature to be in a dropdown menu.
+- Implement images to cloudinary.
+- Having a list of lists on a users show page.
+- More information on the homepage, potentially a reading list of the day.
