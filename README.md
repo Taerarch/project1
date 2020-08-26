@@ -20,3 +20,6 @@ This project uses rails for its CRUD system and takes information from google bo
 - Implement images to cloudinary.
 - Having a list of lists on a users show page.
 - More information on the homepage, potentially a reading list of the day.
+
+### Deployed
+https://book-reading-list-project.herokuapp.com/
