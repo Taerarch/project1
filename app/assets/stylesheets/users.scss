@@ -100,7 +100,7 @@ a {
   margin-left: 60%;
 }
 
-.links {
+.nav {
   margin-left: 0%;
   margin-bottom: 50px;
 }
@@ -145,7 +145,6 @@ a {
   color: #70bbff;
   text-align: center;
 }
-
 
 .form {
   background-color: #204433;
@@ -202,9 +201,16 @@ input[type=submit] {
   margin-right: 32px;
 }
 
-#sign {
-  margin-left: 30%;
+#links {
+  text-align: left;
   display: inline-block;
+  width: 64%;
+}
+
+#sign {
+  text-align: right;
+  display: inline-block;
+  min-width: 30%;
 }
 
 #desc {
